@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.8.6 on win32)" generated="20210128 10:36:50.959" rpa="false">
+<suite id="s1" name="POCBD" source="C:\Users\Lucas Dias\Documents\Projetos\Nova pasta\POCBD.robot">
+<test id="s1-t1" name="Banco de dados">
+<kw name="Get Movie">
+<arguments>
+<arg>No One You Know</arg>
+<arg>Somewhat Famous</arg>
+</arguments>
+<msg timestamp="20210128 10:36:51.260" level="TRACE">Arguments: [ ${artist}='No One You Know' | ${title}='Somewhat Famous' ]</msg>
+<kw name="Get" library="biblioteca">
+<arguments>
+<arg>${artist}</arg>
+<arg>${title}</arg>
+</arguments>
+<msg timestamp="20210128 10:36:51.260" level="TRACE">Arguments: [ 'No One You Know' | 'Somewhat Famous' ]</msg>
+<msg timestamp="20210128 10:36:51.260" level="DEBUG">Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane</msg>
+<msg timestamp="20210128 10:36:51.260" level="DEBUG">Changing event name from before-call.apigateway to before-call.api-gateway</msg>
+<msg timestamp="20210128 10:36:51.260" level="DEBUG">Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict</msg>
+<msg timestamp="20210128 10:36:51.265" level="DEBUG">Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration</msg>
+<msg timestamp="20210128 10:36:51.265" level="DEBUG">Changing event name from before-parameter-build.route53 to before-parameter-build.route-53</msg>
+<msg timestamp="20210128 10:36:51.265" level="DEBUG">Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search</msg>
+<msg timestamp="20210128 10:36:51.265" level="DEBUG">Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section</msg>
+<msg timestamp="20210128 10:36:51.269" level="DEBUG">Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask</msg>
+<msg timestamp="20210128 10:36:51.269" level="DEBUG">Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section</msg>
+<msg timestamp="20210128 10:36:51.269" level="DEBUG">Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search</msg>
+<msg timestamp="20210128 10:36:51.269" level="DEBUG">Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section</msg>
+<msg timestamp="20210128 10:36:51.325" level="DEBUG">Loading JSON file: c:\users\lucas dias\.virtualenvs\nova_pasta-qanrwr3b\lib\site-packages\boto3\data\dynamodb\2012-08-10\resources-1.json</msg>
+<msg timestamp="20210128 10:36:51.326" level="DEBUG">IMDS ENDPOINT: http://169.254.169.254/</msg>
+<msg timestamp="20210128 10:36:51.326" level="DEBUG">Looking for credentials via: env</msg>
+<msg timestamp="20210128 10:36:51.326" level="DEBUG">Looking for credentials via: assume-role</msg>
+<msg timestamp="20210128 10:36:51.326" level="DEBUG">Looking for credentials via: assume-role-with-web-identity</msg>
+<msg timestamp="20210128 10:36:51.326" level="DEBUG">Looking for credentials via: sso</msg>
+<msg timestamp="20210128 10:36:51.326" level="DEBUG">Looking for credentials via: shared-credentials-file</msg>
+<msg timestamp="20210128 10:36:51.330" level="INFO">Found credentials in shared credentials file: ~/.aws/credentials</msg>
+<msg timestamp="20210128 10:36:51.330" level="DEBUG">Loading JSON file: c:\users\lucas dias\.virtualenvs\nova_pasta-qanrwr3b\lib\site-packages\botocore\data\endpoints.json</msg>
+<msg timestamp="20210128 10:36:51.342" level="DEBUG">Event choose-service-name: calling handler &lt;function handle_service_name_alias at 0x00000138C01E0700&gt;</msg>
+<msg timestamp="20210128 10:36:51.396" level="DEBUG">Loading JSON file: c:\users\lucas dias\.virtualenvs\nova_pasta-qanrwr3b\lib\site-packages\botocore\data\dynamodb\2012-08-10\service-2.json</msg>
+<msg timestamp="20210128 10:36:51.400" level="DEBUG">Event creating-client-class.dynamodb: calling handler &lt;function add_generate_presigned_url at 0x00000138C0039280&gt;</msg>
+<msg timestamp="20210128 10:36:51.400" level="DEBUG">Setting dynamodb timeout as (60, 60)</msg>
+<msg timestamp="20210128 10:36:51.400" level="DEBUG">Loading JSON file: c:\users\lucas dias\.virtualenvs\nova_pasta-qanrwr3b\lib\site-packages\botocore\data\_retry.json</msg>
+<msg timestamp="20210128 10:36:51.400" level="DEBUG">Registering retry handlers for service: dynamodb</msg>
+<msg timestamp="20210128 10:36:51.404" level="DEBUG">Loading dynamodb:dynamodb</msg>
+<msg timestamp="20210128 10:36:51.404" level="DEBUG">Event creating-resource-class.dynamodb.ServiceResource: calling handler &lt;function lazy_call.&lt;locals&gt;._handler at 0x00000138C02D3310&gt;</msg>
+<msg timestamp="20210128 10:36:51.408" level="DEBUG">Loading dynamodb:Table</msg>
+<msg timestamp="20210128 10:36:51.410" level="DEBUG">Event creating-resource-class.dynamodb.Table: calling handler &lt;function lazy_call.&lt;locals&gt;._handler at 0x00000138C02D33A0&gt;</msg>
+<msg timestamp="20210128 10:36:51.411" level="DEBUG">Event creating-resource-class.dynamodb.Table: calling handler &lt;function lazy_call.&lt;locals&gt;._handler at 0x00000138C02D3310&gt;</msg>
+<msg timestamp="20210128 10:36:51.412" level="DEBUG">Calling dynamodb:get_item with {'TableName': 'Music', 'Key': {'Artist': 'Somewhat Famous', 'AlbumTitle': 'No One You Know'}}</msg>
+<msg timestamp="20210128 10:36:51.412" level="DEBUG">Event provide-client-params.dynamodb.GetItem: calling handler &lt;function copy_dynamodb_params at 0x00000138C0EA8F70&gt;</msg>
+<msg timestamp="20210128 10:36:51.412" level="DEBUG">Event before-parameter-build.dynamodb.GetItem: calling handler &lt;bound method TransformationInjector.inject_condition_expressions of &lt;boto3.dynamodb.transform.TransformationInjector object at 0x00000138C0E8C580&gt;&gt;</msg>
+<msg timestamp="20210128 10:36:51.412" level="DEBUG">Event before-parameter-build.dynamodb.GetItem: calling handler &lt;bound method TransformationInjector.inject_attribute_value_input of &lt;boto3.dynamodb.transform.TransformationInjector object at 0x00000138C0E8C580&gt;&gt;</msg>
+<msg timestamp="20210128 10:36:51.412" level="DEBUG">Event before-parameter-build.dynamodb.GetItem: calling handler &lt;function generate_idempotent_uuid at 0x00000138C01E4DC0&gt;</msg>
+<msg timestamp="20210128 10:36:51.412" level="DEBUG">Event before-call.dynamodb.GetItem: calling handler &lt;function inject_api_version_header_if_needed at 0x00000138C0203670&gt;</msg>
+<msg timestamp="20210128 10:36:51.412" level="DEBUG">Making request for OperationModel(name=GetItem) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'X-Amz-Target': 'DynamoDB_20120810.GetItem', 'Content-Type': 'application/x-amz-json-1.0', 'User-Agent': 'Boto3/1.16.59 Python/3.8.6 Windows/10 Botocore/1.19.59 Resource'}, 'body': b'{"TableName": "Music", "Key": {"Artist": {"S": "Somewhat Famous"}, "AlbumTitle": {"S": "No One You Know"}}}', 'url': 'http://localhost:8005/', 'context': {'client_region': 'us-west-2', 'client_config': &lt;botocore.config.Config object at 0x00000138C0E51A90&gt;, 'has_streaming_input': False, 'auth_type': None}}</msg>
+<msg timestamp="20210128 10:36:51.412" level="DEBUG">Event request-created.dynamodb.GetItem: calling handler &lt;bound method RequestSigner.handler of &lt;botocore.signers.RequestSigner object at 0x00000138C0E519D0&gt;&gt;</msg>
+<msg timestamp="20210128 10:36:51.412" level="DEBUG">Event choose-signer.dynamodb.GetItem: calling handler &lt;function set_operation_specific_signer at 0x00000138C01E4CA0&gt;</msg>
+<msg timestamp="20210128 10:36:51.412" level="DEBUG">Calculating signature using v4 auth.</msg>
+<msg timestamp="20210128 10:36:51.412" level="DEBUG">CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.0
+host:localhost:8005
+x-amz-date:20210128T133651Z
+x-amz-target:DynamoDB_20120810.GetItem
+
+content-type;host;x-amz-date;x-amz-target
+24d9c184594a04d198c59ee50cb435b3c67ed4e774f85da64bdca18c07e073a2</msg>
+<msg timestamp="20210128 10:36:51.412" level="DEBUG">StringToSign:
+AWS4-HMAC-SHA256
+20210128T133651Z
+20210128/us-west-2/dynamodb/aws4_request
+ac74e94956d7ab99f21be7522ca0677aa80a1f228fcfe00455895323380623e4</msg>
+<msg timestamp="20210128 10:36:51.412" level="DEBUG">Signature:
+3f226a33d0bce15dc443acf2d4ce6a8f149a3ce132d42adb44d0d67e2ceb6ee3</msg>
+<msg timestamp="20210128 10:36:51.412" level="DEBUG">Sending http request: &lt;AWSPreparedRequest stream_output=False, method=POST, url=http://localhost:8005/, headers={'X-Amz-Target': b'DynamoDB_20120810.GetItem', 'Content-Type': b'application/x-amz-json-1.0', 'User-Agent': b'Boto3/1.16.59 Python/3.8.6 Windows/10 Botocore/1.19.59 Resource', 'X-Amz-Date': b'20210128T133651Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAJ57KOFGFNQMHSNTA/20210128/us-west-2/dynamodb/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-target, Signature=3f226a33d0bce15dc443acf2d4ce6a8f149a3ce132d42adb44d0d67e2ceb6ee3', 'Content-Length': '107'}&gt;</msg>
+<msg timestamp="20210128 10:36:51.412" level="DEBUG">Starting new HTTP connection (1): localhost:8005</msg>
+<msg timestamp="20210128 10:36:55.529" level="DEBUG">Exception received when sending HTTP request.</msg>
+<msg timestamp="20210128 10:36:55.530" level="DEBUG">Event needs-retry.dynamodb.GetItem: calling handler &lt;botocore.retryhandler.RetryHandler object at 0x00000138C0E85550&gt;</msg>
+<msg timestamp="20210128 10:36:55.530" level="DEBUG">retry needed, retryable exception caught: Could not connect to the endpoint URL: "http://localhost:8005/"</msg>
+<msg timestamp="20210128 10:36:55.530" level="DEBUG">Retry needed, action of: 0.05</msg>
+<msg timestamp="20210128 10:36:55.530" level="DEBUG">Response received to retry, sleeping for 0.05 seconds</msg>
+<msg timestamp="20210128 10:36:55.589" level="DEBUG">Event request-created.dynamodb.GetItem: calling handler &lt;bound method RequestSigner.handler of &lt;botocore.signers.RequestSigner object at 0x00000138C0E519D0&gt;&gt;</msg>
+<msg timestamp="20210128 10:36:55.589" level="DEBUG">Event choose-signer.dynamodb.GetItem: calling handler &lt;function set_operation_specific_signer at 0x00000138C01E4CA0&gt;</msg>
+<msg timestamp="20210128 10:36:55.589" level="DEBUG">Calculating signature using v4 auth.</msg>
+<msg timestamp="20210128 10:36:55.593" level="DEBUG">CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.0
+host:localhost:8005
+x-amz-date:20210128T133655Z
+x-amz-target:DynamoDB_20120810.GetItem
+
+content-type;host;x-amz-date;x-amz-target
+24d9c184594a04d198c59ee50cb435b3c67ed4e774f85da64bdca18c07e073a2</msg>
+<msg timestamp="20210128 10:36:55.593" level="DEBUG">StringToSign:
+AWS4-HMAC-SHA256
+20210128T133655Z
+20210128/us-west-2/dynamodb/aws4_request
+f5b4b92508d37cbd6ca236b703fe2c07210a01347d85b1a7b1544cfa021c78fa</msg>
+<msg timestamp="20210128 10:36:55.593" level="DEBUG">Signature:
+e3e99538af4431e46725933e7c697c47cef3352e4b474e170edb12a95ec800ac</msg>
+<msg timestamp="20210128 10:36:55.593" level="DEBUG">Sending http request: &lt;AWSPreparedRequest stream_output=False, method=POST, url=http://localhost:8005/, headers={'X-Amz-Target': b'DynamoDB_20120810.GetItem', 'Content-Type': b'application/x-amz-json-1.0', 'User-Agent': b'Boto3/1.16.59 Python/3.8.6 Windows/10 Botocore/1.19.59 Resource', 'X-Amz-Date': b'20210128T133655Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAJ57KOFGFNQMHSNTA/20210128/us-west-2/dynamodb/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-target, Signature=e3e99538af4431e46725933e7c697c47cef3352e4b474e170edb12a95ec800ac', 'Content-Length': '107'}&gt;</msg>
+<msg timestamp="20210128 10:36:55.593" level="DEBUG">Starting new HTTP connection (2): localhost:8005</msg>
+<msg timestamp="20210128 10:36:59.673" level="DEBUG">Exception received when sending HTTP request.</msg>
+<msg timestamp="20210128 10:36:59.673" level="DEBUG">Event needs-retry.dynamodb.GetItem: calling handler &lt;botocore.retryhandler.RetryHandler object at 0x00000138C0E85550&gt;</msg>
+<msg timestamp="20210128 10:36:59.673" level="DEBUG">retry needed, retryable exception caught: Could not connect to the endpoint URL: "http://localhost:8005/"</msg>
+<msg timestamp="20210128 10:36:59.673" level="DEBUG">Retry needed, action of: 0.1</msg>
+<msg timestamp="20210128 10:36:59.673" level="DEBUG">Response received to retry, sleeping for 0.1 seconds</msg>
+<msg timestamp="20210128 10:36:59.780" level="DEBUG">Event request-created.dynamodb.GetItem: calling handler &lt;bound method RequestSigner.handler of &lt;botocore.signers.RequestSigner object at 0x00000138C0E519D0&gt;&gt;</msg>
+<msg timestamp="20210128 10:36:59.780" level="DEBUG">Event choose-signer.dynamodb.GetItem: calling handler &lt;function set_operation_specific_signer at 0x00000138C01E4CA0&gt;</msg>
+<msg timestamp="20210128 10:36:59.780" level="DEBUG">Calculating signature using v4 auth.</msg>
+<msg timestamp="20210128 10:36:59.780" level="DEBUG">CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.0
+host:localhost:8005
+x-amz-date:20210128T133659Z
+x-amz-target:DynamoDB_20120810.GetItem
+
+content-type;host;x-amz-date;x-amz-target
+24d9c184594a04d198c59ee50cb435b3c67ed4e774f85da64bdca18c07e073a2</msg>
+<msg timestamp="20210128 10:36:59.780" level="DEBUG">StringToSign:
+AWS4-HMAC-SHA256
+20210128T133659Z
+20210128/us-west-2/dynamodb/aws4_request
+4293738e9cb8cf2513af01c169f4932243bd5cbced6c003522f412aea0755369</msg>
+<msg timestamp="20210128 10:36:59.780" level="DEBUG">Signature:
+0c427c84fe20e6ffb1217ba22a73c04924dc7cf977318aec4f399a8a55a2c156</msg>
+<msg timestamp="20210128 10:36:59.780" level="DEBUG">Sending http request: &lt;AWSPreparedRequest stream_output=False, method=POST, url=http://localhost:8005/, headers={'X-Amz-Target': b'DynamoDB_20120810.GetItem', 'Content-Type': b'application/x-amz-json-1.0', 'User-Agent': b'Boto3/1.16.59 Python/3.8.6 Windows/10 Botocore/1.19.59 Resource', 'X-Amz-Date': b'20210128T133659Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAJ57KOFGFNQMHSNTA/20210128/us-west-2/dynamodb/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-target, Signature=0c427c84fe20e6ffb1217ba22a73c04924dc7cf977318aec4f399a8a55a2c156', 'Content-Length': '107'}&gt;</msg>
+<msg timestamp="20210128 10:36:59.784" level="DEBUG">Starting new HTTP connection (3): localhost:8005</msg>
+<msg timestamp="20210128 10:37:03.877" level="DEBUG">Exception received when sending HTTP request.</msg>
+<msg timestamp="20210128 10:37:03.877" level="DEBUG">Event needs-retry.dynamodb.GetItem: calling handler &lt;botocore.retryhandler.RetryHandler object at 0x00000138C0E85550&gt;</msg>
+<msg timestamp="20210128 10:37:03.877" level="DEBUG">retry needed, retryable exception caught: Could not connect to the endpoint URL: "http://localhost:8005/"</msg>
+<msg timestamp="20210128 10:37:03.877" level="DEBUG">Retry needed, action of: 0.2</msg>
+<msg timestamp="20210128 10:37:03.877" level="DEBUG">Response received to retry, sleeping for 0.2 seconds</msg>
+<msg timestamp="20210128 10:37:04.085" level="DEBUG">Event request-created.dynamodb.GetItem: calling handler &lt;bound method RequestSigner.handler of &lt;botocore.signers.RequestSigner object at 0x00000138C0E519D0&gt;&gt;</msg>
+<msg timestamp="20210128 10:37:04.085" level="DEBUG">Event choose-signer.dynamodb.GetItem: calling handler &lt;function set_operation_specific_signer at 0x00000138C01E4CA0&gt;</msg>
+<msg timestamp="20210128 10:37:04.085" level="DEBUG">Calculating signature using v4 auth.</msg>
+<msg timestamp="20210128 10:37:04.085" level="DEBUG">CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.0
+host:localhost:8005
+x-amz-date:20210128T133704Z
+x-amz-target:DynamoDB_20120810.GetItem
+
+content-type;host;x-amz-date;x-amz-target
+24d9c184594a04d198c59ee50cb435b3c67ed4e774f85da64bdca18c07e073a2</msg>
+<msg timestamp="20210128 10:37:04.085" level="DEBUG">StringToSign:
+AWS4-HMAC-SHA256
+20210128T133704Z
+20210128/us-west-2/dynamodb/aws4_request
+a984826ce5ecbb6735a61e4a1778a959fdb30b7269cf28fab5acb844e4a9deb3</msg>
+<msg timestamp="20210128 10:37:04.085" level="DEBUG">Signature:
+d8c45ce661b17a9b643429b21f0867c06ae3a71d5fbda73c4e21d7da41757bf4</msg>
+<msg timestamp="20210128 10:37:04.089" level="DEBUG">Sending http request: &lt;AWSPreparedRequest stream_output=False, method=POST, url=http://localhost:8005/, headers={'X-Amz-Target': b'DynamoDB_20120810.GetItem', 'Content-Type': b'application/x-amz-json-1.0', 'User-Agent': b'Boto3/1.16.59 Python/3.8.6 Windows/10 Botocore/1.19.59 Resource', 'X-Amz-Date': b'20210128T133704Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAJ57KOFGFNQMHSNTA/20210128/us-west-2/dynamodb/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-target, Signature=d8c45ce661b17a9b643429b21f0867c06ae3a71d5fbda73c4e21d7da41757bf4', 'Content-Length': '107'}&gt;</msg>
+<msg timestamp="20210128 10:37:04.089" level="DEBUG">Starting new HTTP connection (4): localhost:8005</msg>
+<msg timestamp="20210128 10:37:08.179" level="DEBUG">Exception received when sending HTTP request.</msg>
+<msg timestamp="20210128 10:37:08.180" level="DEBUG">Event needs-retry.dynamodb.GetItem: calling handler &lt;botocore.retryhandler.RetryHandler object at 0x00000138C0E85550&gt;</msg>
+<msg timestamp="20210128 10:37:08.180" level="DEBUG">retry needed, retryable exception caught: Could not connect to the endpoint URL: "http://localhost:8005/"</msg>
+<msg timestamp="20210128 10:37:08.181" level="DEBUG">Retry needed, action of: 0.4</msg>
+<msg timestamp="20210128 10:37:08.181" level="DEBUG">Response received to retry, sleeping for 0.4 seconds</msg>
+<msg timestamp="20210128 10:37:08.590" level="DEBUG">Event request-created.dynamodb.GetItem: calling handler &lt;bound method RequestSigner.handler of &lt;botocore.signers.RequestSigner object at 0x00000138C0E519D0&gt;&gt;</msg>
+<msg timestamp="20210128 10:37:08.590" level="DEBUG">Event choose-signer.dynamodb.GetItem: calling handler &lt;function set_operation_specific_signer at 0x00000138C01E4CA0&gt;</msg>
+<msg timestamp="20210128 10:37:08.590" level="DEBUG">Calculating signature using v4 auth.</msg>
+<msg timestamp="20210128 10:37:08.590" level="DEBUG">CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.0
+host:localhost:8005
+x-amz-date:20210128T133708Z
+x-amz-target:DynamoDB_20120810.GetItem
+
+content-type;host;x-amz-date;x-amz-target
+24d9c184594a04d198c59ee50cb435b3c67ed4e774f85da64bdca18c07e073a2</msg>
+<msg timestamp="20210128 10:37:08.590" level="DEBUG">StringToSign:
+AWS4-HMAC-SHA256
+20210128T133708Z
+20210128/us-west-2/dynamodb/aws4_request
+9c41347f4e200454e271cc4d383bef8dbf3c3cf416e6cf097c2380c32d581af8</msg>
+<msg timestamp="20210128 10:37:08.590" level="DEBUG">Signature:
+5ba0c91de3aa83216a9b335638f68366f579082a96f5dc5269619c9a377bfbdc</msg>
+<msg timestamp="20210128 10:37:08.594" level="DEBUG">Sending http request: &lt;AWSPreparedRequest stream_output=False, method=POST, url=http://localhost:8005/, headers={'X-Amz-Target': b'DynamoDB_20120810.GetItem', 'Content-Type': b'application/x-amz-json-1.0', 'User-Agent': b'Boto3/1.16.59 Python/3.8.6 Windows/10 Botocore/1.19.59 Resource', 'X-Amz-Date': b'20210128T133708Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAJ57KOFGFNQMHSNTA/20210128/us-west-2/dynamodb/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-target, Signature=5ba0c91de3aa83216a9b335638f68366f579082a96f5dc5269619c9a377bfbdc', 'Content-Length': '107'}&gt;</msg>
+<msg timestamp="20210128 10:37:08.594" level="DEBUG">Starting new HTTP connection (5): localhost:8005</msg>
+<msg timestamp="20210128 10:37:12.684" level="DEBUG">Exception received when sending HTTP request.</msg>
+<msg timestamp="20210128 10:37:12.684" level="DEBUG">Event needs-retry.dynamodb.GetItem: calling handler &lt;botocore.retryhandler.RetryHandler object at 0x00000138C0E85550&gt;</msg>
+<msg timestamp="20210128 10:37:12.685" level="DEBUG">retry needed, retryable exception caught: Could not connect to the endpoint URL: "http://localhost:8005/"</msg>
+<msg timestamp="20210128 10:37:12.685" level="DEBUG">Retry needed, action of: 0.8</msg>
+<msg timestamp="20210128 10:37:12.685" level="DEBUG">Response received to retry, sleeping for 0.8 seconds</msg>
+<msg timestamp="20210128 10:37:13.491" level="DEBUG">Event request-created.dynamodb.GetItem: calling handler &lt;bound method RequestSigner.handler of &lt;botocore.signers.RequestSigner object at 0x00000138C0E519D0&gt;&gt;</msg>
+<msg timestamp="20210128 10:37:13.491" level="DEBUG">Event choose-signer.dynamodb.GetItem: calling handler &lt;function set_operation_specific_signer at 0x00000138C01E4CA0&gt;</msg>
+<msg timestamp="20210128 10:37:13.491" level="DEBUG">Calculating signature using v4 auth.</msg>
+<msg timestamp="20210128 10:37:13.491" level="DEBUG">CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.0
+host:localhost:8005
+x-amz-date:20210128T133713Z
+x-amz-target:DynamoDB_20120810.GetItem
+
+content-type;host;x-amz-date;x-amz-target
+24d9c184594a04d198c59ee50cb435b3c67ed4e774f85da64bdca18c07e073a2</msg>
+<msg timestamp="20210128 10:37:13.491" level="DEBUG">StringToSign:
+AWS4-HMAC-SHA256
+20210128T133713Z
+20210128/us-west-2/dynamodb/aws4_request
+4fbb9f469133e9d4e8dc9feb6a9b8c10d0e8c6763025a0cfa4a9198778b23e25</msg>
+<msg timestamp="20210128 10:37:13.491" level="DEBUG">Signature:
+c46950446fdaff86c5421104383a0ea3e4dee6483ef7624b4b7451f548249f74</msg>
+<msg timestamp="20210128 10:37:13.494" level="DEBUG">Sending http request: &lt;AWSPreparedRequest stream_output=False, method=POST, url=http://localhost:8005/, headers={'X-Amz-Target': b'DynamoDB_20120810.GetItem', 'Content-Type': b'application/x-amz-json-1.0', 'User-Agent': b'Boto3/1.16.59 Python/3.8.6 Windows/10 Botocore/1.19.59 Resource', 'X-Amz-Date': b'20210128T133713Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAJ57KOFGFNQMHSNTA/20210128/us-west-2/dynamodb/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-target, Signature=c46950446fdaff86c5421104383a0ea3e4dee6483ef7624b4b7451f548249f74', 'Content-Length': '107'}&gt;</msg>
+<msg timestamp="20210128 10:37:13.494" level="DEBUG">Starting new HTTP connection (6): localhost:8005</msg>
+<msg timestamp="20210128 10:37:17.622" level="DEBUG">Exception received when sending HTTP request.</msg>
+<msg timestamp="20210128 10:37:17.624" level="DEBUG">Event needs-retry.dynamodb.GetItem: calling handler &lt;botocore.retryhandler.RetryHandler object at 0x00000138C0E85550&gt;</msg>
+<msg timestamp="20210128 10:37:17.624" level="DEBUG">retry needed, retryable exception caught: Could not connect to the endpoint URL: "http://localhost:8005/"</msg>
+<msg timestamp="20210128 10:37:17.624" level="DEBUG">Retry needed, action of: 1.6</msg>
+<msg timestamp="20210128 10:37:17.624" level="DEBUG">Response received to retry, sleeping for 1.6 seconds</msg>
+<msg timestamp="20210128 10:37:19.239" level="DEBUG">Event request-created.dynamodb.GetItem: calling handler &lt;bound method RequestSigner.handler of &lt;botocore.signers.RequestSigner object at 0x00000138C0E519D0&gt;&gt;</msg>
+<msg timestamp="20210128 10:37:19.240" level="DEBUG">Event choose-signer.dynamodb.GetItem: calling handler &lt;function set_operation_specific_signer at 0x00000138C01E4CA0&gt;</msg>
+<msg timestamp="20210128 10:37:19.241" level="DEBUG">Calculating signature using v4 auth.</msg>
+<msg timestamp="20210128 10:37:19.241" level="DEBUG">CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.0
+host:localhost:8005
+x-amz-date:20210128T133719Z
+x-amz-target:DynamoDB_20120810.GetItem
+
+content-type;host;x-amz-date;x-amz-target
+24d9c184594a04d198c59ee50cb435b3c67ed4e774f85da64bdca18c07e073a2</msg>
+<msg timestamp="20210128 10:37:19.242" level="DEBUG">StringToSign:
+AWS4-HMAC-SHA256
+20210128T133719Z
+20210128/us-west-2/dynamodb/aws4_request
+f1e6bfcfdf8b642bffda469eeb653f1a1632c197411a0c604d3691ec3f573179</msg>
+<msg timestamp="20210128 10:37:19.242" level="DEBUG">Signature:
+2a17e64bf9b0ecb3757539a6f779b605db6a95b4b3e0feb815a966546ca5642f</msg>
+<msg timestamp="20210128 10:37:19.243" level="DEBUG">Sending http request: &lt;AWSPreparedRequest stream_output=False, method=POST, url=http://localhost:8005/, headers={'X-Amz-Target': b'DynamoDB_20120810.GetItem', 'Content-Type': b'application/x-amz-json-1.0', 'User-Agent': b'Boto3/1.16.59 Python/3.8.6 Windows/10 Botocore/1.19.59 Resource', 'X-Amz-Date': b'20210128T133719Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAJ57KOFGFNQMHSNTA/20210128/us-west-2/dynamodb/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-target, Signature=2a17e64bf9b0ecb3757539a6f779b605db6a95b4b3e0feb815a966546ca5642f', 'Content-Length': '107'}&gt;</msg>
+<msg timestamp="20210128 10:37:19.244" level="DEBUG">Starting new HTTP connection (7): localhost:8005</msg>
+<msg timestamp="20210128 10:37:23.337" level="DEBUG">Exception received when sending HTTP request.</msg>
+<msg timestamp="20210128 10:37:23.337" level="DEBUG">Event needs-retry.dynamodb.GetItem: calling handler &lt;botocore.retryhandler.RetryHandler object at 0x00000138C0E85550&gt;</msg>
+<msg timestamp="20210128 10:37:23.337" level="DEBUG">retry needed, retryable exception caught: Could not connect to the endpoint URL: "http://localhost:8005/"</msg>
+<msg timestamp="20210128 10:37:23.337" level="DEBUG">Retry needed, action of: 3.2</msg>
+<msg timestamp="20210128 10:37:23.338" level="DEBUG">Response received to retry, sleeping for 3.2 seconds</msg>
+<msg timestamp="20210128 10:37:26.545" level="DEBUG">Event request-created.dynamodb.GetItem: calling handler &lt;bound method RequestSigner.handler of &lt;botocore.signers.RequestSigner object at 0x00000138C0E519D0&gt;&gt;</msg>
+<msg timestamp="20210128 10:37:26.545" level="DEBUG">Event choose-signer.dynamodb.GetItem: calling handler &lt;function set_operation_specific_signer at 0x00000138C01E4CA0&gt;</msg>
+<msg timestamp="20210128 10:37:26.545" level="DEBUG">Calculating signature using v4 auth.</msg>
+<msg timestamp="20210128 10:37:26.545" level="DEBUG">CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.0
+host:localhost:8005
+x-amz-date:20210128T133726Z
+x-amz-target:DynamoDB_20120810.GetItem
+
+content-type;host;x-amz-date;x-amz-target
+24d9c184594a04d198c59ee50cb435b3c67ed4e774f85da64bdca18c07e073a2</msg>
+<msg timestamp="20210128 10:37:26.546" level="DEBUG">StringToSign:
+AWS4-HMAC-SHA256
+20210128T133726Z
+20210128/us-west-2/dynamodb/aws4_request
+38026a4e3340664aa6d12d7408ed751b852ad98c31b27e07cb216bad2878ddf1</msg>
+<msg timestamp="20210128 10:37:26.546" level="DEBUG">Signature:
+090f6483533b1583ef2def11c10de6b241ecd34a20f7c5af8393d39a47fbe08b</msg>
+<msg timestamp="20210128 10:37:26.546" level="DEBUG">Sending http request: &lt;AWSPreparedRequest stream_output=False, method=POST, url=http://localhost:8005/, headers={'X-Amz-Target': b'DynamoDB_20120810.GetItem', 'Content-Type': b'application/x-amz-json-1.0', 'User-Agent': b'Boto3/1.16.59 Python/3.8.6 Windows/10 Botocore/1.19.59 Resource', 'X-Amz-Date': b'20210128T133726Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAJ57KOFGFNQMHSNTA/20210128/us-west-2/dynamodb/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-target, Signature=090f6483533b1583ef2def11c10de6b241ecd34a20f7c5af8393d39a47fbe08b', 'Content-Length': '107'}&gt;</msg>
+<msg timestamp="20210128 10:37:26.546" level="DEBUG">Starting new HTTP connection (8): localhost:8005</msg>
+<msg timestamp="20210128 10:37:30.664" level="DEBUG">Exception received when sending HTTP request.</msg>
+<msg timestamp="20210128 10:37:30.665" level="DEBUG">Event needs-retry.dynamodb.GetItem: calling handler &lt;botocore.retryhandler.RetryHandler object at 0x00000138C0E85550&gt;</msg>
+<msg timestamp="20210128 10:37:30.665" level="DEBUG">retry needed, retryable exception caught: Could not connect to the endpoint URL: "http://localhost:8005/"</msg>
+<msg timestamp="20210128 10:37:30.666" level="DEBUG">Retry needed, action of: 6.4</msg>
+<msg timestamp="20210128 10:37:30.666" level="DEBUG">Response received to retry, sleeping for 6.4 seconds</msg>
+<msg timestamp="20210128 10:37:37.076" level="DEBUG">Event request-created.dynamodb.GetItem: calling handler &lt;bound method RequestSigner.handler of &lt;botocore.signers.RequestSigner object at 0x00000138C0E519D0&gt;&gt;</msg>
+<msg timestamp="20210128 10:37:37.077" level="DEBUG">Event choose-signer.dynamodb.GetItem: calling handler &lt;function set_operation_specific_signer at 0x00000138C01E4CA0&gt;</msg>
+<msg timestamp="20210128 10:37:37.078" level="DEBUG">Calculating signature using v4 auth.</msg>
+<msg timestamp="20210128 10:37:37.078" level="DEBUG">CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.0
+host:localhost:8005
+x-amz-date:20210128T133737Z
+x-amz-target:DynamoDB_20120810.GetItem
+
+content-type;host;x-amz-date;x-amz-target
+24d9c184594a04d198c59ee50cb435b3c67ed4e774f85da64bdca18c07e073a2</msg>
+<msg timestamp="20210128 10:37:37.079" level="DEBUG">StringToSign:
+AWS4-HMAC-SHA256
+20210128T133737Z
+20210128/us-west-2/dynamodb/aws4_request
+e17615d5d51491ee0007cf17e82f3463093e595b88a5f0fbc0d67309465e7191</msg>
+<msg timestamp="20210128 10:37:37.079" level="DEBUG">Signature:
+241c90aaa6abb778ecd60c8930b8b4b5e6164faba280945bde1018f6b43eb27e</msg>
+<msg timestamp="20210128 10:37:37.080" level="DEBUG">Sending http request: &lt;AWSPreparedRequest stream_output=False, method=POST, url=http://localhost:8005/, headers={'X-Amz-Target': b'DynamoDB_20120810.GetItem', 'Content-Type': b'application/x-amz-json-1.0', 'User-Agent': b'Boto3/1.16.59 Python/3.8.6 Windows/10 Botocore/1.19.59 Resource', 'X-Amz-Date': b'20210128T133737Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAJ57KOFGFNQMHSNTA/20210128/us-west-2/dynamodb/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-target, Signature=241c90aaa6abb778ecd60c8930b8b4b5e6164faba280945bde1018f6b43eb27e', 'Content-Length': '107'}&gt;</msg>
+<msg timestamp="20210128 10:37:37.080" level="DEBUG">Starting new HTTP connection (9): localhost:8005</msg>
+<msg timestamp="20210128 10:37:41.206" level="DEBUG">Exception received when sending HTTP request.</msg>
+<msg timestamp="20210128 10:37:41.207" level="DEBUG">Event needs-retry.dynamodb.GetItem: calling handler &lt;botocore.retryhandler.RetryHandler object at 0x00000138C0E85550&gt;</msg>
+<msg timestamp="20210128 10:37:41.207" level="DEBUG">retry needed, retryable exception caught: Could not connect to the endpoint URL: "http://localhost:8005/"</msg>
+<msg timestamp="20210128 10:37:41.207" level="DEBUG">Retry needed, action of: 12.8</msg>
+<msg timestamp="20210128 10:37:41.207" level="DEBUG">Response received to retry, sleeping for 12.8 seconds</msg>
+<msg timestamp="20210128 10:37:54.013" level="DEBUG">Event request-created.dynamodb.GetItem: calling handler &lt;bound method RequestSigner.handler of &lt;botocore.signers.RequestSigner object at 0x00000138C0E519D0&gt;&gt;</msg>
+<msg timestamp="20210128 10:37:54.013" level="DEBUG">Event choose-signer.dynamodb.GetItem: calling handler &lt;function set_operation_specific_signer at 0x00000138C01E4CA0&gt;</msg>
+<msg timestamp="20210128 10:37:54.015" level="DEBUG">Calculating signature using v4 auth.</msg>
+<msg timestamp="20210128 10:37:54.015" level="DEBUG">CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.0
+host:localhost:8005
+x-amz-date:20210128T133754Z
+x-amz-target:DynamoDB_20120810.GetItem
+
+content-type;host;x-amz-date;x-amz-target
+24d9c184594a04d198c59ee50cb435b3c67ed4e774f85da64bdca18c07e073a2</msg>
+<msg timestamp="20210128 10:37:54.015" level="DEBUG">StringToSign:
+AWS4-HMAC-SHA256
+20210128T133754Z
+20210128/us-west-2/dynamodb/aws4_request
+c7d2def7cdfe481f359560e53f4c570b5d7cc038a43fc9e8c4c83624df035978</msg>
+<msg timestamp="20210128 10:37:54.016" level="DEBUG">Signature:
+3fbd778d05201f4e0ea8abb269feca34e13a226c229b362bd36bff3854e1c3e6</msg>
+<msg timestamp="20210128 10:37:54.016" level="DEBUG">Sending http request: &lt;AWSPreparedRequest stream_output=False, method=POST, url=http://localhost:8005/, headers={'X-Amz-Target': b'DynamoDB_20120810.GetItem', 'Content-Type': b'application/x-amz-json-1.0', 'User-Agent': b'Boto3/1.16.59 Python/3.8.6 Windows/10 Botocore/1.19.59 Resource', 'X-Amz-Date': b'20210128T133754Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAJ57KOFGFNQMHSNTA/20210128/us-west-2/dynamodb/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-target, Signature=3fbd778d05201f4e0ea8abb269feca34e13a226c229b362bd36bff3854e1c3e6', 'Content-Length': '107'}&gt;</msg>
+<msg timestamp="20210128 10:37:54.016" level="DEBUG">Starting new HTTP connection (10): localhost:8005</msg>
+<msg timestamp="20210128 10:37:58.105" level="DEBUG">Exception received when sending HTTP request.</msg>
+<msg timestamp="20210128 10:37:58.106" level="DEBUG">Event needs-retry.dynamodb.GetItem: calling handler &lt;botocore.retryhandler.RetryHandler object at 0x00000138C0E85550&gt;</msg>
+<msg timestamp="20210128 10:37:58.108" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210128 10:36:51.260" endtime="20210128 10:37:58.108"></status>
+</kw>
+<msg timestamp="20210128 10:37:58.109" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210128 10:36:51.260" endtime="20210128 10:37:58.109"></status>
+</kw>
+<status status="PASS" starttime="20210128 10:36:51.260" endtime="20210128 10:37:58.111" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20210128 10:36:50.962" endtime="20210128 10:37:58.116"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="POCBD">POCBD</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

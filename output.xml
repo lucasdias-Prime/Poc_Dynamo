@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.8.6 on win32)" generated="20210127 13:26:29.723" rpa="false">
+<suite id="s1" name="POCBD" source="C:\Users\Lucas Dias\Documents\Projetos\Nova pasta\POCBD.robot">
+<test id="s1-t1" name="Banco de dados">
+<kw name="Get Movie">
+<arguments>
+<arg>'The Big New Movie'</arg>
+<arg>2015</arg>
+</arguments>
+<kw name="Get" library="biblioteca">
+<arguments>
+<arg>${title}</arg>
+<arg>${year}</arg>
+</arguments>
+<msg timestamp="20210127 13:26:30.127" level="INFO">Found credentials in shared credentials file: ~/.aws/credentials</msg>
+<msg timestamp="20210127 13:26:30.220" level="INFO">One or more parameter values were invalid: Type mismatch for key</msg>
+<status status="PASS" starttime="20210127 13:26:30.038" endtime="20210127 13:26:30.220"></status>
+</kw>
+<status status="PASS" starttime="20210127 13:26:30.038" endtime="20210127 13:26:30.221"></status>
+</kw>
+<status status="PASS" starttime="20210127 13:26:30.037" endtime="20210127 13:26:30.221" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20210127 13:26:29.725" endtime="20210127 13:26:30.222"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="POCBD">POCBD</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

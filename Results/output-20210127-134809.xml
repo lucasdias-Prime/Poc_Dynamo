@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.8.6 on win32)" generated="20210127 13:48:09.104" rpa="false">
+<suite id="s1" name="POCBD" source="C:\Users\Lucas Dias\Documents\Projetos\Nova pasta\POCBD.robot">
+<test id="s1-t1" name="Banco de dados">
+<kw name="Get Movie">
+<arguments>
+<arg>The Big New Movie</arg>
+<arg>2015</arg>
+</arguments>
+<msg timestamp="20210127 13:48:09.421" level="TRACE">Arguments: [ ${title}='The Big New Movie' | ${year}='2015' ]</msg>
+<kw name="Get" library="biblioteca">
+<arguments>
+<arg>${title}</arg>
+<arg>${year}</arg>
+</arguments>
+<msg timestamp="20210127 13:48:09.421" level="TRACE">Arguments: [ 'The Big New Movie' | '2015' ]</msg>
+<msg timestamp="20210127 13:48:09.422" level="DEBUG">Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane</msg>
+<msg timestamp="20210127 13:48:09.423" level="DEBUG">Changing event name from before-call.apigateway to before-call.api-gateway</msg>
+<msg timestamp="20210127 13:48:09.424" level="DEBUG">Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict</msg>
+<msg timestamp="20210127 13:48:09.425" level="DEBUG">Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration</msg>
+<msg timestamp="20210127 13:48:09.425" level="DEBUG">Changing event name from before-parameter-build.route53 to before-parameter-build.route-53</msg>
+<msg timestamp="20210127 13:48:09.426" level="DEBUG">Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search</msg>
+<msg timestamp="20210127 13:48:09.426" level="DEBUG">Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section</msg>
+<msg timestamp="20210127 13:48:09.428" level="DEBUG">Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask</msg>
+<msg timestamp="20210127 13:48:09.429" level="DEBUG">Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section</msg>
+<msg timestamp="20210127 13:48:09.429" level="DEBUG">Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search</msg>
+<msg timestamp="20210127 13:48:09.429" level="DEBUG">Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section</msg>
+<msg timestamp="20210127 13:48:09.481" level="DEBUG">Loading JSON file: c:\users\lucas dias\.virtualenvs\nova_pasta-qanrwr3b\lib\site-packages\boto3\data\dynamodb\2012-08-10\resources-1.json</msg>
+<msg timestamp="20210127 13:48:09.485" level="DEBUG">IMDS ENDPOINT: http://169.254.169.254/</msg>
+<msg timestamp="20210127 13:48:09.487" level="DEBUG">Looking for credentials via: env</msg>
+<msg timestamp="20210127 13:48:09.487" level="DEBUG">Looking for credentials via: assume-role</msg>
+<msg timestamp="20210127 13:48:09.487" level="DEBUG">Looking for credentials via: assume-role-with-web-identity</msg>
+<msg timestamp="20210127 13:48:09.487" level="DEBUG">Looking for credentials via: sso</msg>
+<msg timestamp="20210127 13:48:09.487" level="DEBUG">Looking for credentials via: shared-credentials-file</msg>
+<msg timestamp="20210127 13:48:09.488" level="INFO">Found credentials in shared credentials file: ~/.aws/credentials</msg>
+<msg timestamp="20210127 13:48:09.489" level="DEBUG">Loading JSON file: c:\users\lucas dias\.virtualenvs\nova_pasta-qanrwr3b\lib\site-packages\botocore\data\endpoints.json</msg>
+<msg timestamp="20210127 13:48:09.508" level="DEBUG">Event choose-service-name: calling handler &lt;function handle_service_name_alias at 0x000001FC54600700&gt;</msg>
+<msg timestamp="20210127 13:48:09.553" level="DEBUG">Loading JSON file: c:\users\lucas dias\.virtualenvs\nova_pasta-qanrwr3b\lib\site-packages\botocore\data\dynamodb\2012-08-10\service-2.json</msg>
+<msg timestamp="20210127 13:48:09.558" level="DEBUG">Event creating-client-class.dynamodb: calling handler &lt;function add_generate_presigned_url at 0x000001FC54457280&gt;</msg>
+<msg timestamp="20210127 13:48:09.559" level="DEBUG">Setting dynamodb timeout as (60, 60)</msg>
+<msg timestamp="20210127 13:48:09.560" level="DEBUG">Loading JSON file: c:\users\lucas dias\.virtualenvs\nova_pasta-qanrwr3b\lib\site-packages\botocore\data\_retry.json</msg>
+<msg timestamp="20210127 13:48:09.560" level="DEBUG">Registering retry handlers for service: dynamodb</msg>
+<msg timestamp="20210127 13:48:09.561" level="DEBUG">Loading dynamodb:dynamodb</msg>
+<msg timestamp="20210127 13:48:09.561" level="DEBUG">Event creating-resource-class.dynamodb.ServiceResource: calling handler &lt;function lazy_call.&lt;locals&gt;._handler at 0x000001FC546F2280&gt;</msg>
+<msg timestamp="20210127 13:48:09.564" level="DEBUG">Loading dynamodb:Table</msg>
+<msg timestamp="20210127 13:48:09.565" level="DEBUG">Event creating-resource-class.dynamodb.Table: calling handler &lt;function lazy_call.&lt;locals&gt;._handler at 0x000001FC546F2310&gt;</msg>
+<msg timestamp="20210127 13:48:09.566" level="DEBUG">Event creating-resource-class.dynamodb.Table: calling handler &lt;function lazy_call.&lt;locals&gt;._handler at 0x000001FC546F2280&gt;</msg>
+<msg timestamp="20210127 13:48:09.567" level="DEBUG">Calling dynamodb:get_item with {'TableName': 'Movies', 'Key': {'year': '2015', 'title': 'The Big New Movie'}}</msg>
+<msg timestamp="20210127 13:48:09.567" level="DEBUG">Event provide-client-params.dynamodb.GetItem: calling handler &lt;function copy_dynamodb_params at 0x000001FC552C8EE0&gt;</msg>
+<msg timestamp="20210127 13:48:09.567" level="DEBUG">Event before-parameter-build.dynamodb.GetItem: calling handler &lt;bound method TransformationInjector.inject_condition_expressions of &lt;boto3.dynamodb.transform.TransformationInjector object at 0x000001FC552AB550&gt;&gt;</msg>
+<msg timestamp="20210127 13:48:09.567" level="DEBUG">Event before-parameter-build.dynamodb.GetItem: calling handler &lt;bound method TransformationInjector.inject_attribute_value_input of &lt;boto3.dynamodb.transform.TransformationInjector object at 0x000001FC552AB550&gt;&gt;</msg>
+<msg timestamp="20210127 13:48:09.567" level="DEBUG">Event before-parameter-build.dynamodb.GetItem: calling handler &lt;function generate_idempotent_uuid at 0x000001FC54614DC0&gt;</msg>
+<msg timestamp="20210127 13:48:09.568" level="DEBUG">Event before-call.dynamodb.GetItem: calling handler &lt;function inject_api_version_header_if_needed at 0x000001FC54621670&gt;</msg>
+<msg timestamp="20210127 13:48:09.568" level="DEBUG">Making request for OperationModel(name=GetItem) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'X-Amz-Target': 'DynamoDB_20120810.GetItem', 'Content-Type': 'application/x-amz-json-1.0', 'User-Agent': 'Boto3/1.16.59 Python/3.8.6 Windows/10 Botocore/1.19.59 Resource'}, 'body': b'{"TableName": "Movies", "Key": {"year": {"S": "2015"}, "title": {"S": "The Big New Movie"}}}', 'url': 'http://localhost:8001/', 'context': {'client_region': 'us-west-2', 'client_config': &lt;botocore.config.Config object at 0x000001FC5526FA60&gt;, 'has_streaming_input': False, 'auth_type': None}}</msg>
+<msg timestamp="20210127 13:48:09.569" level="DEBUG">Event request-created.dynamodb.GetItem: calling handler &lt;bound method RequestSigner.handler of &lt;botocore.signers.RequestSigner object at 0x000001FC5526F9A0&gt;&gt;</msg>
+<msg timestamp="20210127 13:48:09.569" level="DEBUG">Event choose-signer.dynamodb.GetItem: calling handler &lt;function set_operation_specific_signer at 0x000001FC54614CA0&gt;</msg>
+<msg timestamp="20210127 13:48:09.569" level="DEBUG">Calculating signature using v4 auth.</msg>
+<msg timestamp="20210127 13:48:09.569" level="DEBUG">CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.0
+host:localhost:8001
+x-amz-date:20210127T164809Z
+x-amz-target:DynamoDB_20120810.GetItem
+
+content-type;host;x-amz-date;x-amz-target
+421d97686428c26bfd04917c6b8f75e139d4daaa4b09fcb4273dcc84e1ddf833</msg>
+<msg timestamp="20210127 13:48:09.569" level="DEBUG">StringToSign:
+AWS4-HMAC-SHA256
+20210127T164809Z
+20210127/us-west-2/dynamodb/aws4_request
+161db1391e67b0ec98b29f4cf624803695ecd6a5ce023de8d03d1a83d4d0d8e5</msg>
+<msg timestamp="20210127 13:48:09.570" level="DEBUG">Signature:
+0ab4b2f7c823cf3be075a70a4039872cc1dfe9010b843e03e320da31e5ae9b21</msg>
+<msg timestamp="20210127 13:48:09.570" level="DEBUG">Sending http request: &lt;AWSPreparedRequest stream_output=False, method=POST, url=http://localhost:8001/, headers={'X-Amz-Target': b'DynamoDB_20120810.GetItem', 'Content-Type': b'application/x-amz-json-1.0', 'User-Agent': b'Boto3/1.16.59 Python/3.8.6 Windows/10 Botocore/1.19.59 Resource', 'X-Amz-Date': b'20210127T164809Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA4OP5TKNE554MJXV3/20210127/us-west-2/dynamodb/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-target, Signature=0ab4b2f7c823cf3be075a70a4039872cc1dfe9010b843e03e320da31e5ae9b21', 'Content-Length': '92'}&gt;</msg>
+<msg timestamp="20210127 13:48:09.570" level="DEBUG">Starting new HTTP connection (1): localhost:8001</msg>
+<msg timestamp="20210127 13:48:09.582" level="DEBUG">http://localhost:8001 "POST / HTTP/1.1" 400 135</msg>
+<msg timestamp="20210127 13:48:09.582" level="DEBUG">Response headers: {'Date': 'Wed, 27 Jan 2021 16:48:09 GMT', 'Content-Type': 'application/x-amz-json-1.0', 'x-amzn-RequestId': '0c322966-9de3-410d-afc6-9af1da1c5b45', 'Content-Length': '135', 'Server': 'Jetty(9.4.18.v20190429)'}</msg>
+<msg timestamp="20210127 13:48:09.582" level="DEBUG">Response body:
+b'{"__type":"com.amazon.coral.validate#ValidationException","message":"One or more parameter values were invalid: Type mismatch for key"}'</msg>
+<msg timestamp="20210127 13:48:09.584" level="DEBUG">Event needs-retry.dynamodb.GetItem: calling handler &lt;botocore.retryhandler.RetryHandler object at 0x000001FC552A4520&gt;</msg>
+<msg timestamp="20210127 13:48:09.584" level="DEBUG">crc32 check skipped, the x-amz-crc32 header is not in the http response.</msg>
+<msg timestamp="20210127 13:48:09.584" level="DEBUG">No retry needed.</msg>
+<msg timestamp="20210127 13:48:09.584" level="DEBUG">Event after-call.dynamodb.GetItem: calling handler &lt;bound method TransformationInjector.inject_attribute_value_output of &lt;boto3.dynamodb.transform.TransformationInjector object at 0x000001FC552AB550&gt;&gt;</msg>
+<msg timestamp="20210127 13:48:09.584" level="INFO">One or more parameter values were invalid: Type mismatch for key</msg>
+<msg timestamp="20210127 13:48:09.584" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210127 13:48:09.421" endtime="20210127 13:48:09.584"></status>
+</kw>
+<msg timestamp="20210127 13:48:09.585" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210127 13:48:09.421" endtime="20210127 13:48:09.585"></status>
+</kw>
+<status status="PASS" starttime="20210127 13:48:09.420" endtime="20210127 13:48:09.585" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20210127 13:48:09.107" endtime="20210127 13:48:09.587"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="POCBD">POCBD</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

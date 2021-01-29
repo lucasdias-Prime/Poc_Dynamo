@@ -1,0 +1,21 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+robotframework = "*"
+robotframework-seleniumlibrary = "*"
+rpaframework = "*"
+hvac = "*"
+robotframework-browser = "*"
+boto3 = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
+
+
+[scripts]
+robot = "robot -d Results --timestampoutputs --loglevel TRACE:INFO POCBD.robot"
